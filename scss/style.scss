@@ -14,7 +14,15 @@ ol {
 body {
   font-family: "League Spartan", sans-serif;
 }
-
+.tablet-river{
+  display: none;
+}
+.tablet-meal{
+  display: none;
+}
+.tablet-peoples{
+  display: none;
+}
 .pattern{
   user-select: none;
 }
@@ -266,14 +274,6 @@ body {
         .active {
           opacity: 1;
           position: relative;
-          // &::marker {
-          //   content: "--------------------                               ";
-          //   color: #9e7f66;
-          //   letter-spacing: -2.4px;
-          //   position: absolute !important;
-          //   margin-left: -50px;
-          // }
-
           &::before{
             content: "";
             position: absolute;
@@ -282,7 +282,6 @@ body {
             background: #9e7f66;
             left: -130px;
             top: 10px;
-
             z-index: -1;
           }
         }
@@ -318,7 +317,19 @@ body {
     padding: 78px 40px;
     display: flex;
     justify-content: space-between;
-
+    .footer-link{
+      display: flex;
+      ul {
+        li {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 200%;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      }
+    }
     ul {
       li {
         font-weight: 400;
@@ -329,5 +340,287 @@ body {
         color: #fff;
       }
     }
+      
+    }
+}
+
+@media (max-width:1000px) {
+  .section-content {
+    max-width: 457px;
+    text-align: center;
+  
+    img {
+      margin-bottom: 39px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+      letter-spacing: -0.01em;
+      color: #242b37;
+      margin-bottom: 27px;
+      max-width: 457px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: #242b37;
+    }
+  }
+  .header {
+    background-image: url("/images/tablet-bg.jpg");
+    background-repeat: no-repeat;
+    min-height: 0;
+    .container {
+      padding-top: 374px;
+      text-align: center;
+      .logo {
+        margin-bottom: 38px;
+        display: inline-block;
+      }
+  
+      .header-content {
+        margin: 0 auto;
+        max-width: 689px;
+        h2 {
+          font-weight: 300;
+          font-size: 48px;
+          line-height: 100%;
+          letter-spacing: -0.01em;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        p {
+          margin-bottom: 52px;
+        }
+        button {
+          margin-bottom: 120px;
+        }
+      }
+    }
+  }
+  .enjoyable-section {
+    background-image: url(/images/bg-pattern.png);
+    background-position-y: 50%;
+    background-position-x: 0%;
+    transform: translateY(-55px);
+    .container {
+      display: flex;
+      flex-direction: column;
+        .enjoyable-picture{
+          img{
+            display: none;
+          }
+          .tablet-river{
+            display: block;
+            margin-bottom: 56px;
+          }
+        }
+    }
+  }
+  .locally-section {
+    background-image: url(/images/bg-pattern-right.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      .locally-picture {
+        position: relative;
+        .pattern {
+          position: absolute;
+          top: 228px;
+          right: -100px;
+        }
+        .meal{
+          display: none;
+        }
+        .tablet-meal{
+          display: block;
+          margin-bottom: 56px;
+        }
+      }
+      p{
+        margin-bottom: 118px;
+      }
+    }
+  }
+  .highlights-section {
+    height: 891px;
+    background: #111;
+    padding: 96px 0;
+    transform: translateY(0px);
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 573px;
+      .highlights-content {
+        h2{
+          margin-bottom: 27px;
+        }
+        p {
+          margin-bottom: 54px;
+        }
+      }
+  
+      .cards {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 573px;
+        padding-top: 0;
+  
+        .card {
+          display: flex;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+          margin-bottom: 24px;
+          gap: 62px;
+          padding-bottom: 30px;
+          .card-picture {
+            position: relative;
+            img:first-child {
+              max-width: 128px;
+              max-height: 96px;
+            }
+            .pattern {
+              position: absolute;
+              z-index: -1;
+              right: -25px;
+              top: 10px;
+            }
+          }
+  
+          .card-content {
+            padding-top: 8px;
+            h3 {
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 120%;
+              letter-spacing: -0.01em;
+              color: #fff;
+              margin-bottom: 6px;
+            }
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 162%;
+              color: #fff;
+              opacity: 0.8;
+            }
+          }
+        }
+        .card:last-child {
+          border-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .gatherings-section {
+    background-image: url("/images/bg-pattern.png");
+    background-repeat: no-repeat;
+    transform: translateY(-0px);
+    padding-top: 96px;
+    background-position-x: -360px;
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      .gatherings-picture {
+        position: relative;
+        margin-bottom: 57px;
+        .pattern {
+          position: absolute;
+          left: -40px;
+          top: -38px;
+        }
+        .peoples{
+          display: none;
+        }
+        .tablet-peoples{
+          display: block;
+          margin-bottom: 57px;
+        }
+      }
+
+      .gatherings-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 457px;
+        text-align: center;
+        h2 {
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 100%;
+          letter-spacing: -0.01em;
+          color: #242b37;
+          margin-bottom: 19px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 150%;
+          color: #242b37;
+          margin-bottom: 60px;
+        }
+        button {
+          background: #000;
+          margin-bottom: 120px;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          gap: 40px;
+          max-width: 689px;
+          position: absolute;
+          text-align: center;
+          top: 485px;
+          .active {
+            opacity: 1;
+            position: relative;
+            &::before{
+              content: "";
+              position: absolute;
+              width: 48px;
+              height: 1px;
+              background: #9e7f66;
+              left: 55px;
+              top: 30px;
+              z-index: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reservation-section {
+    background-image: url("/images/tablet-reservation-bg.jpg");
+    background-repeat: no-repeat;
+    .container {
+      padding: 72px 87px 64px 66px;
+      display: flex;
+      gap: 24px;
+      flex-direction: column; 
+    }
+  }
+  .footer {
+    background: #111111;
+    .container {
+      padding: 66px 40px;
+      display: flex;
+      justify-content: start;
+      gap: 129px;
+      .footer-link{
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+      }
+  }
+
   }
 }
+
+
